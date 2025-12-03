@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "components/svg-filters.html" . }}
+    <main class="my-[var(--page-margin-y)] relative">
+      {{ block "main" . }}{{ end }}
+      {{ partial "components/shade-mask" . }}
+    </main>
+    {{ partial "scripts.html" . }}
+</body>
+</html>

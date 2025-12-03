@@ -1,0 +1,30 @@
+{{ $emojis := dict
+  "caution" "🚨"
+  "important" "☝️"
+  "note" "ℹ️"
+  "tip" "💡"
+  "warning" "⚠️"
+  "announcement" "📣"
+}}
+
+{{ if eq .Type "alert" }}
+  <blockquote class="rounded-1 leading-[1.75] mx-0 px-5
+      flex gap-3 my-2 alert-{{ .AlertType }}"
+      style="background-color: rgba(var(--block-background-color-rgb), 0.5)"
+  >
+    <div class="py-5">
+      {{ with .AlertTitle }}
+        {{.}}
+      {{ else }}
+        {{ index $emojis .AlertType }}
+      {{ end }}
+    </div>
+    <div>
+        {{ .Text }}
+    </div>
+  </blockquote>
+{{ else }}
+  <blockquote class="text-secondary p-0 m-0 ml-[1em]">
+    {{ .Text }}
+  </blockquote>
+{{ end }}

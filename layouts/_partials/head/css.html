@@ -1,0 +1,26 @@
+<!-- Aplayer -->
+{{ with resources.Get "css/aplayer.css" }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+
+<!-- Pagefind -->
+{{ if eq .Kind "taxonomy" }}
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+{{ end }}
+
+<!-- Extra -->
+{{ range .Site.Params.extraCSSFiles -}}
+<link
+    rel="stylesheet"
+    href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}"
+/>
+{{- end }}
+
+<!-- theme css -->
+{{ with resources.Get "css/uno.css" | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}
+
+{{ with resources.Get "css/main.scss" | css.Sass | minify }}
+<style>{{ .Content | safeCSS }}</style>
+{{ end }}

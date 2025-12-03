@@ -1,0 +1,29 @@
+{{ define "main" }}
+<article>
+    {{ partial "header.html" . }}
+
+    {{- $cards := .Site.GetPage "section" "cards" }}
+    {{- $pages := $cards.Pages }}
+    {{- $featured := first 6 $pages }}
+    {{- $rest := after 6 $pages }}
+    <div class="grid md:grid-cols-2 gap-4 my-4">
+        {{- range $featured }}
+            {{ partial "items/card" (dict
+            "context" .
+            "summary" true
+            "summaryClass" "text-base!") }}
+        {{- end }}
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 list-none text-lg">
+        {{- range $rest }}
+        <a class="border-b-dashed border-b-1 border-b-neutral-300 dark:border-b-neutral-700
+            flex items-end py-1
+            block text-secondary hover:text-unset hover:no-underline transition"
+            href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+</article>
+{{ end }}

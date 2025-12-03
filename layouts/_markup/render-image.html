@@ -1,0 +1,17 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text | default "" -}}
+{{- $caption := .Title | default "" -}}
+{{- $class := .Attributes.class | default "" -}}
+
+<figure>
+    <img
+        class="lazy {{ $class }}" loading="lazy"
+        src="{{ $src }}" alt="{{ $alt }}"
+        data-libra
+    />
+    {{- if $caption }}
+    <figcaption>
+        <h4>{{ $caption | markdownify }}</h4>
+    </figcaption>
+    {{- end }}
+</figure>

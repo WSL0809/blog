@@ -1,0 +1,24 @@
+description: 欢迎来访，这里只有真情流露和赤裸的思考。
+nav:
+  - name: 结构
+    link: /essays/
+    target: _self
+  - name: 倾泻
+    link: /posts/
+    target: _self
+  - name: 书目
+    link: /library/
+    target: _self
+  - name: 假想
+    link: /fictions/
+    target: _self
+  - name: 自述
+    link: /about/
+    target: _self
+footerInternalLinks:
+  - name: 林卷
+    link: /linkroll/
+  - name: 标记
+    link: /highlights/
+  - name: 赞助
+    link: /sponsor/

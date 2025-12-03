@@ -1,0 +1,15 @@
+{{ $active := .active }}
+{{ $link := .link }}
+{{ $text := .text }}
+
+<a href="{{ .Site.LanguagePrefix }}/{{ $link }}"
+    class="texl-base md:text-lg relative
+    hover:no-underline relative
+    {{ if $active }}font-extrabold{{ end }}"
+>
+    {{ $text }}
+    {{ if $active }}
+    <div class="absolute left-0 right-0 text-center top-3"
+        style="view-transition-name: home-nav-item-emphasis;">·</div>
+    {{ end }}
+</a>

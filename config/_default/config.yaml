@@ -1,0 +1,17 @@
+baseURL: https://www.geedea.pro/
+timeZone: Asia/Shanghai
+hasCJKLanguage: true
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: true
+outputs:
+  home:
+    - HTML
+    - calheatmap
+    - RSS
+    - Sitemap
+outputFormats:
+  calheatmap:
+    mediaType: application/json
+    baseName: cal-heatmap
+    isPlainText: true
+    permalinkable: true

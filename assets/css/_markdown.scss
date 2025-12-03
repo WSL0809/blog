@@ -1,0 +1,248 @@
+// Variables (can be moved to a separate variables file if needed)
+$link-color: var(--link-color);
+$secondary-text-color: var(--secondary-text-color);
+$border-color: var(--border-color);
+$block-background-color: var(--block-background-color);
+
+.markdown-body {
+  max-width: 100%;
+
+  p {
+    hyphens: auto;
+    text-justify: ideographic;
+    margin-bottom: 1em;
+  }
+
+  strong:is([lang="zh-CN"] strong) {
+      text-emphasis: filled dot;
+      text-emphasis-position: under;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  ul, ol {
+      padding-inline-start: 1.75rem;
+      li {
+          padding-left: 0.25rem;
+      }
+      ::marker {
+        color: var(--secondary-text-color);
+      }
+  }
+
+  mark {
+    color: var(--text-color);
+    background-color: rgba(255, 235, 0, .25);
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 235, 0);
+    text-underline-offset: 5px;
+  }
+
+  del {
+      opacity: 0.5
+  }
+
+  iframe {
+      max-width: 100%;
+  }
+
+  a:not(.footnote-backref, .footnote-ref) {
+    // color and underline
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 0.25em;
+    text-decoration-color: $border-color;
+    color: $link-color;
+
+    // link hover effects
+    transition: text-decoration-color 0.1s ease-in-out;
+    &:hover {
+        text-decoration-color: $secondary-text-color;
+    }
+
+    // icons with pseudo-elements
+    &::before, &::after {
+        display: inline-block;
+        font-size: 70%;
+        color: var(--secondary-text-color);
+        vertical-align: middle;
+        font-weight: 800;
+    }
+
+    &::after {
+        margin-left: 0.05em;
+    }
+
+    &::before {
+        --size: 1.25em;
+        margin-right: 0.25em;
+        background-size: var(--size);
+        height: var(--size);
+        width: var(--size);
+        border-radius: 3px;
+
+    }
+
+    // external link icon
+    &.external-link::after {
+        content: '↗';
+    }
+
+    // icons for specific domains
+    &[href*="wikipedia.org"]::before {
+        content: '';
+        background-color: #fff;
+        background-image: url('/icons/wikipedia.svg');
+    }
+    &[href*="wiktionary.org"]::before {
+        content: '';
+        background-color: #fff;
+        background-image: url('/icons/enwiktionary.svg');
+    }
+    &[href*="etymonline.com"]::before {
+        content: '';
+        background-image: url('/icons/etymonline.jpg');
+    }
+    &[href*="github.com"]::before {
+        content: '';
+        background-image: url('/icons/github.svg');
+        @media (prefers-color-scheme: dark) {
+            filter: invert(1);
+        }
+        .dark & {
+            filter: invert(1);
+        }
+    }
+  }
+
+  a.footnote-ref {
+      color: var(--secondary-text-color);
+      margin-right: 0.25rem;
+  }
+
+  code {
+    font-size: 90%;
+    color: var(--secondary-text-color);
+    &:not(pre > code)::before,
+    &:not(pre > code)::after {
+        content: '`'
+    }
+  }
+
+  pre {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    position: relative;
+
+    & > code {
+      padding: 0;
+      color: unset;
+      background-color: inherit;
+      border: 0;
+      overflow: auto;
+      display: block;
+
+      &:not([data-lang="fallback"])::before {
+        --width: 1rem;
+        content: attr(data-lang);
+        display: block;
+        box-sizing: border-box;
+        line-height: 1rem;
+
+        position: absolute;
+        top: 0;
+        right: -1rem;
+        width: var(--width);
+        min-height: 2.5rem;
+        writing-mode: vertical-rl;
+        text-align: center;
+
+        font-size: 0.75em;
+        background: #333;
+        color: #fff;
+        padding: 0.5rem 0;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+
+  figure {
+    display: block;
+    margin: 0;
+    figcaption {
+        max-width: 100%;
+        h4 {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            font-weight: 400;
+            text-align: center;
+            white-space: normal;
+        }
+    }
+  }
+}
+
+/* gallery shortcode */
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0.5rem;
+  white-space: nowrap;
+
+  & > figure, & > a:has(> figure) {
+    margin: 0;
+    flex-shrink: 0;
+    display: inline-block;
+    position: relative;
+    box-shadow: inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.1);
+    img {
+      height: 20rem;
+      display: block;
+      border-radius: 4px;
+      margin: 0;
+    }
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.35rem;
+        h4 {
+            font-size: 0.8rem;
+            margin: 0;
+            text-align: left;
+            width: fit-content;
+            color: var(--text-color);
+            background-color: rgba(var(--block-background-color-rgb), 0.75);
+            backdrop-filter: blur(0.5rem);
+            padding: 0.2rem 0.35rem;
+            border-radius: 3px;
+            line-height: 1.2;
+        }
+    }
+  }
+  & > p { display: none }
+
+  &.center {
+      justify-content: center;
+  }
+  &.full-width {
+      & > figure {
+          flex-shrink: unset;
+          img {
+              width: 100%;
+          }
+      }
+  }
+}

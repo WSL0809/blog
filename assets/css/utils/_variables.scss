@@ -1,0 +1,56 @@
+:root {
+    /* colors */
+    --background-color: #f5f5f7;
+    --block-background-color: rgb(var(--block-background-color-rgb));
+    --block-background-color-rgb: 233, 232, 237;
+    --border-color: #d0d7de;
+    --text-color: #1d1d1f;
+    --secondary-text-color: #6e6e73;
+    --link-color: #313135;
+    --bright-background-color: #fafafa;
+
+    /* fonts */
+    --serif-font-family:
+      "Noto Serif",
+      "Noto Serif SC",
+      "Noto Serif TC",
+      "Noto Serif CJK SC",
+      "Noto Serif CJK TC",
+      "Source Han Serif SC",
+      "Source Han Serif TC",
+      "Songti SC",
+      "Times New Roman",
+      Times,
+      serif;
+
+    --page-width: 650px;
+    --page-margin-y: 5rem;
+
+    /* pagefind custom css */
+    --pagefind-ui-primary: var(--text-color);
+    --pagefind-ui-text: var(--text-color);
+    --pagefind-ui-background: var(--background-color);
+    --pagefind-ui-border: var(--border-color);
+    --pagefind-ui-tag: var(--border-color);
+}
+
+@mixin variablesInDarkMode {
+    --background-color: #1d2021;
+    --block-background-color: rgb(var(--block-background-color-rgb));
+    --block-background-color-rgb: 24, 26, 27;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --text-color: #d2cec9;
+    --secondary-text-color: #a1998d;
+    --link-color: #e3dfda;
+    --bright-background-color: #666;
+}
+
+.dark {
+    @include variablesInDarkMode;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include variablesInDarkMode;
+    }
+}

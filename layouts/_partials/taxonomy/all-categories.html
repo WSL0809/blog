@@ -1,0 +1,24 @@
+<!-- Display Categories -->
+<section class="flex flex-wrap justify-between gap-4">
+{{ range sort .Site.Taxonomies.categories ".Count" "desc" }}
+    <a href="{{ .Page.RelPermalink }}"
+        class="block hover:no-underline hover:-transform-translate-y-2 transition-transform"
+        style="view-transition-name: category-{{ .Page.Title }};">
+        <div class="taxonomy-categories-item">
+            <h3 class="category-title my-1">
+                {{ with .Page.Params.icon }}
+                <span class="inline-block">{{ . }}</span>
+                {{ end }}
+                <span class="xerox">{{ .Page.LinkTitle }}</span>
+            </h3>
+            <p class="mt-0">{{ .Page.Params.description | markdownify }}</p>
+        </div>
+    </a>
+{{ end }}
+</section>
+
+<p class="mt-4">
+    <a class="small-button" href="/categories/uncategorized/">
+        查看随笔 <span class="text-secondary">→</span>
+    </a>
+</p>

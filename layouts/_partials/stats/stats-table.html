@@ -1,0 +1,56 @@
+<style>
+.site-stats-table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+.site-stats-table td:nth-child(2n) {
+  text-align: right;
+}
+.number-pill {
+    text-align: center;
+    display: inline-block;
+    line-height: 1.75rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+    background-color: var(--block-background-color);
+    font-size: 1rem;
+}
+</style>
+
+<table class="site-stats-table w-full max-w-[700px] border-collapse mb-6">
+  <tbody>
+    <tr>
+        <td>文章总数</td>
+        <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "!=" "") }}</span></td>
+        <td>总字数</td>
+        <td>
+            <span class="number-pill">
+            {{- $words := 0 -}}
+            {{- range (where .Site.RegularPages "Section" "!=" "") -}}
+                {{- $words = add $words .WordCount -}}
+            {{- end -}}
+            {{ lang.FormatNumber 0 $words }}
+            </span>
+        </td>
+    </tr>
+    <tr>
+      <td>标签总数</td>
+      <td><span class="number-pill">{{ len .Site.Taxonomies.tags }}</span></td>
+      <td>分类数量</td>
+      <td><span class="number-pill">{{ len .Site.Taxonomies.categories }}</span></td>
+    </tr>
+    <tr>
+      <td>散文数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "posts") }}</span></td>
+      <td>议论数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "essays") }}</span></td>
+    </tr>
+    <tr>
+      <td>小说数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "fictions") }}</span></td>
+      <td>书评数量</td>
+      <td><span class="number-pill">{{ len (where .Site.RegularPages "Section" "library") }}</span></td>
+    </tr>
+  </tbody>
+</table>

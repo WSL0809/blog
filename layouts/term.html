@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <article>
+        {{ partial "header" . }}
+        {{ partial "home/home-nav" . }}
+        {{ partial "term/term-header" . }}
+        <section>
+            {{ with .Content }}
+            <div class="markdown-body text-size-lg md:text-size-xl">
+                {{ . }}<hr/>
+            </div>
+            {{ end }}
+            {{ partial "term/term-posts" . }}
+            {{ partial "term/term-books" . }}
+        </section>
+    </article>
+    {{ partial "term/term-scripts" . }}
+    {{ partial "footer" . }}
+{{ end }}

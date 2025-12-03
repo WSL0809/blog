@@ -1,0 +1,31 @@
+{{ if .Date }}
+    {{ $hour := .Date.Hour }}
+    {{ $fuzzyTimes := slice
+        (dict "limit" 5  "label" (T "fuzzyTimes.afterMidnight"))
+        (dict "limit" 7  "label" (T "fuzzyTimes.earlyMorning"))
+        (dict "limit" 11 "label" (T "fuzzyTimes.morning"))
+        (dict "limit" 13 "label" (T "fuzzyTimes.noon"))
+        (dict "limit" 17 "label" (T "fuzzyTimes.afternoon"))
+        (dict "limit" 19 "label" (T "fuzzyTimes.evening"))
+        (dict "limit" 22 "label" (T "fuzzyTimes.night"))
+    }}
+    {{ $fuzzyTime := (T "fuzzyTimes.midnight") }} {{/* default */}}
+    {{ range $fuzzyTimes }}
+    {{ if lt $hour .limit }}
+        {{ $fuzzyTime = .label }}
+        {{ break }}
+    {{ end }}
+    {{ end }}
+
+  <time class="post-date"
+        datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}"
+        data-pagefind-sort="date[datetime], weight[data-weight]"
+        data-weight="{{ if .Params.featured }}30{{ else }}20{{ end }}">
+    {{ if eq .Site.Language.Lang "zh" }}
+        {{ .Date.Format "2006年1月2日" }}
+    {{ else }}
+        {{ .Date.Format "January 2, 2006" }},
+    {{ end }}
+    {{ $fuzzyTime }}
+  </time>
+{{ end }}

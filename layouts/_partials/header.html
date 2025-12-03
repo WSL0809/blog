@@ -1,0 +1,27 @@
+<header class="pagefind-exclude
+    md:flex md:justify-between mb-4">
+  <!-- Logo & Title -->
+  <div class="flex flex-col items-center md:items-start gap-2">
+    {{ partial "components/logo" (dict "imageClass" "md:w-20 md:h-auto") }}
+    <a class="text-8 font-900 text-center tracking-widest
+        xerox hover:no-underline"
+        href="{{ .Site.LanguagePrefix }}/"
+      >
+          {{ if .IsHome }}
+            {{ .Site.Title }}
+          {{ else }}
+            {{ if eq .Kind "term" }}
+                {{ if eq .Data.Singular "tag" }}#{{ else }}+{{ end }}
+            {{ end }}
+            {{ .Title }}
+          {{ end }}
+      </a
+    >
+  </div>
+  <!-- Navigation -->
+  <div class="flex md:flex-col justify-center md:justify-start items-center md:items-end gap-3
+      text-size-sm md:text-size-base pl-6 md:pl-6">
+      {{ partial "header/navigation" . }}
+      {{ partial "header/other-navigation" . }}
+  </div>
+</header>

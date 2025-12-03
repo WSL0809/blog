@@ -1,0 +1,11 @@
+description: Eltrac's Blog
+nav:
+  - name: /about
+    link: /en/about/
+    target: _self
+  - name: /linkroll
+    link: /en/linkroll/
+    target: _self
+footerInternalLinks:
+  - name: linkroll
+    link: /en/linkroll/

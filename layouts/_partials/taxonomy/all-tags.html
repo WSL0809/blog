@@ -1,0 +1,46 @@
+<!-- Display Tags -->
+<section>
+  {{ $categorizedTags := dict }}
+  {{ $uncategorizedTags := slice }}
+
+  <!-- Group tags by category -->
+  {{ range $tagName, $tagPages := .Site.Taxonomies.tags }}
+    {{ $tagPage := site.GetPage (printf "/tags/%s" $tagName) }}
+    {{ $tagData := dict "Name" $tagName "Count" (len $tagPages) "Page" $tagPage }}
+    {{ if $tagPage.Params.category }}
+      {{ $category := $tagPage.Params.category }}
+      {{ $categoryTags := index $categorizedTags $category | default slice }}
+      {{ $categoryTags = $categoryTags | append $tagData }}
+      {{ $categorizedTags = merge $categorizedTags (dict $category $categoryTags) }}
+    {{ else }}
+      {{ $uncategorizedTags = $uncategorizedTags | append $tagData }}
+    {{ end }}
+  {{ end }}
+
+  <!-- Sort tags by count -->
+  {{ $uncategorizedTags = sort $uncategorizedTags "Count" "desc" }}
+  {{ range $category, $categoryTags := $categorizedTags }}
+    {{ $categorizedTags = merge $categorizedTags (dict $category (sort $categoryTags "Count" "desc")) }}
+  {{ end }}
+
+  <!-- Display uncategorized tags first -->
+    {{ if $uncategorizedTags }}
+      <div class="flex flex-wrap gap-2">
+        {{ range $uncategorizedTags }}
+        {{ partial "taxonomy/tag-pill" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+  <!-- Display categorized tags -->
+    {{ range $category, $categoryTags := $categorizedTags }}
+      <div>
+        <h3>{{ $category }}</h3>
+        <div class="flex flex-wrap gap-2">
+          {{ range $categoryTags }}
+          {{ partial "taxonomy/tag-pill" . }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+</section>

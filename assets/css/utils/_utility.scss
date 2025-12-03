@@ -1,0 +1,35 @@
+/* container that extends the page width */
+.outbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: calc(var(--page-width) + 10rem);
+    margin: 0 -5rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(var(--page-width) + 20rem);
+    margin: 0 -10rem;
+  }
+
+  &.small {
+    @media screen and (min-width: 768px) {
+      width: calc(var(--page-width) + 4rem);
+      margin: 0 -2rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc(var(--page-width) + 10rem);
+      margin: 0 -5rem;
+    }
+  }
+}
+
+/* filter that gives element a printed look */
+.xerox {
+    filter: url(#x);
+}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <article>
+      {{ partial "header.html" . }}
+      <div id="post-content" class="post-content markdown-body text-size-lg md:text-size-xl leading-loose"
+          style="view-transition-name: post-content-{{ .File.UniqueID }}">
+        {{ partial "posts/toc" . }}
+        {{ .Content }}
+      </div>
+    </article>
+    {{ partial "footer.html" . }}
+{{ end }}

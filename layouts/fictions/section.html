@@ -1,0 +1,31 @@
+{{ define "main" }}
+    <article>
+        {{ partial "header.html" . }}
+        <div class="pagefind-exclude my-4">
+            <div class="flex flex-wrap justify-around gap-8">
+                {{- $fictions := .Site.GetPage "section" "fictions" }}
+                {{- range $fictions.Pages }}
+
+                {{ $rotationDeg := add (math.Floor (mul (math.Rand) 7)) -4 }}
+                {{- $deg := int $rotationDeg -}}
+                {{- $rotateClass := cond (ge $deg 0)
+                    (printf "rotate-%d" $deg)
+                    (printf "-rotate-%d" (mul -1 $deg))
+                -}}
+
+                {{ $steps := slice 60 70 80 90 100 }}
+                {{ $opacity := index $steps (int (math.Floor (mul (math.Rand) 5))) }}
+                {{ $opacityClass := printf "opacity-%d" $opacity }}
+
+                <div class="xerox text-center text-2xl font-extrabold
+                    {{ $rotateClass }} {{ $opacityClass }}
+                    transition hover:opacity-100 hover:scale-110 hover:rotate-0"
+                    style="view-transition-name: post-{{ .File.UniqueID }}">
+                    <a class="hover:no-underline" href="{{ .Permalink }}">《{{ .Title }}》</a>
+                </div>
+                {{- end }}
+            </div>
+        </div>
+    </article>
+    {{ partial "footer.html" . }}
+{{ end }}

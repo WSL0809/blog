@@ -1,0 +1,63 @@
+{{ define "main" }}
+  <article class="pagefind-exclude">
+    {{ partial "header.html" . }}
+    <div>
+        {{ $booksThisYear := where (where .Site.RegularPages "Section" "library") "Date.Year" now.Year }}
+
+        {{ partial "components/section-title" (dict
+            "Left" now.Year
+            "Right" (printf "共 %d 篇书评" (len $booksThisYear))
+        )}}
+
+        <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-4 my-4">
+            {{ $first18BooksThisYear := first 18 $booksThisYear }}
+            {{ range $i, $book := $first18BooksThisYear }}
+                <div class="{{ if gt $i 15 }}hidden md:block{{ end }}"
+                    data-tooltip="{{ $book.Title }}">
+                    {{ partial "items/book" (dict
+                        "ctx" $book
+                    ) }}
+                </div>
+            {{ end }}
+        </div>
+
+        {{ $years := slice }}
+        {{ range where .Site.RegularPages "Section" "library" }}
+        {{ $year := string .Date.Year }}
+        {{ if not (in $years $year) }}
+            {{ $years = $years | append $year }}
+        {{ end }}
+        {{ end }}
+
+        <div class="flex items-center my-8">
+            <a href="/library/2025" class="small-button">
+                {{ T "library.viewAllThisYear" }}
+                <span class="text-secondary">→</span>
+            </a>
+            <p class="my-0 mx-4">
+              {{ $currentYear := printf "%d" now.Year }}
+              {{ range $years }}
+                {{ if ne . $currentYear }}<a class="text-secondary" href="{{ printf "/library/%s/" . }}">{{ . }} 年</a>{{ end }}
+              {{ end }}
+            </p>
+        </div>
+
+        {{ $goodBooks := where (where .Site.RegularPages "Section" "library") ".Params.rating" "==" 5 }}
+        {{ partial "components/section-title" (dict
+            "Left" "推荐好书"
+            "Right" (printf "共 %d 本" (len $goodBooks))
+        )}}
+        <div class="grid grid-cols-4 md:grid-cols-6 items-center gap-4 my-4">
+        {{ range $goodBooks }}
+            <div data-tooltip="{{ .Title }}">
+                {{ partial "items/book" (dict
+                    "ctx" .
+                    "NoViewTransition" true
+                ) }}
+            </div>
+        {{ end }}
+        </div>
+    </div>
+  </article>
+  {{ partial "footer.html" . }}
+{{ end }}

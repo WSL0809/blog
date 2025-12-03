@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <article>
+      <!-- Post Header -->
+      <header class="text-center">
+        {{ partial "components/logo" (dict
+            "link" "fictions/"
+            "src" "/img/potted-skeleton.svg"
+            "imageClass" "block w-[10rem]"
+            "class" "flex justify-center"
+        ) }}
+        <h1
+            class="xerox text-4xl font-900"
+            data-pagefind-meta="title"
+        ><span style="view-transition-name: post-{{ .File.UniqueID }}">{{ .Title }}</span></h1>
+        <div class="text-secondary">{{ partial "components/date" . }}</div>
+      </header>
+
+      <!-- Post Content -->
+      <div id="post-content" class="post-content markdown-body text-size-lg md:text-size-xl leading-loose"
+          style="view-transition-name: post-content-{{ .File.UniqueID }}">
+        {{ .Content }}
+      </div>
+
+      {{ partial "posts/action-menu.html" . }}
+      {{ partial "components/back-to-top.html" . }}
+    </article>
+{{ end }}
