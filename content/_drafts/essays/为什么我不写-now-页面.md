@@ -3,7 +3,7 @@ title: 为什么我不写 Now 页面
 tags:
 - 写作
 date: 2025-09-25 11:32:00
-draft: false
+draft: true
 toc: true
 endnotes:
 - 如果我有 Now 页面的话，这篇文章可能就会变成「我不写 Now 页面」这一条描述被放在页面里。不过这就成悖论了。

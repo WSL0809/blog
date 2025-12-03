@@ -1,5 +1,6 @@
 ---
 date: 2024-03-20
+draft: true
 title: Profitez de votre vie.
 tags:
 - 语言

@@ -3,7 +3,7 @@ title: 继续探索瑞典高校
 subtitle: 留学探索日志 Vol.2
 description: 四处搜罗信息的这几天我感到前所未有的专注，我也感到未来越来越清晰，似乎我离向往的生活确实近了一些。不过现在，我有些累了，祝愿读到这里的你也能好好休息，睡个好觉。
 date: 2024-12-10 20:24:00
-draft: false
+draft: true
 tags:
 - 留学
 aliases:

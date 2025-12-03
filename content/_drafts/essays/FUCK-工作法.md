@@ -6,7 +6,7 @@ tags:
 - 断舍离
 date: 2025-08-05 21:25:00
 categories: 生产力报告
-draft: false
+draft: true
 toc: true
 aliases:
 - /posts/fuck-工作法

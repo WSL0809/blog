@@ -1,7 +1,7 @@
 ---
 title: 为了做而做的问题在哪 II
 date: 2024-12-29 23:47:00
-draft: false
+draft: true
 tags:
 - 认知
 aliases:

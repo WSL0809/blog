@@ -5,7 +5,7 @@ tags:
 - 自杀
 - 写作
 date: 2025-08-19 11:29:00
-draft: false
+draft: true
 aliases:
 - /posts/死亡浪漫主义-ii
 ---

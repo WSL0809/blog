@@ -4,7 +4,7 @@ tags:
   - 翻译
   - English
 date: 2025-05-16 21:22:13
-draft: false
+draft: true
 ---
 
 密码这个词一般会译作 Password，但 Passcode 这个词也很常见，有时还会有 Passphrase 的说法。这些词都有什么区别呢？

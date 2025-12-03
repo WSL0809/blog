@@ -7,7 +7,7 @@ tags:
 mentioned_books:
 - 天生不同
 date: 2025-06-04 21:52:00
-draft: false
+draft: true
 toc: true
 endnotes:
 - 相关阅读：《[从焦虑和自卑谈感受与体验的重要性](/posts/从焦虑和自卑谈感受与体验的重要性/)》、《[既然感受是真实的](/posts/既然感受是真实的/)》、《[重新认识风味](/posts/重新认识风味/)》、《[尽情在舒适区里狂奔](/posts/尽情在舒适区里狂奔/)》

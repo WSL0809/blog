@@ -1,7 +1,7 @@
 ---
 date: 2024-08-23
 description: 只是有些仇父而已
-draft: false
+draft: true
 title: The Gay Oedipus
 toc: true
 tags:

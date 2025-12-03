@@ -1,7 +1,7 @@
 ---
 title: 从角落里走过的人
 date: 2022-11-24
-draft: false
+draft: true
 tags:
   - Backrooms
 ---

@@ -1,7 +1,7 @@
 ---
 title: I Am Sick of PKM
 date: 2025-02-27 11:31:13
-draft: false
+draft: true
 ---
 
 Do you seriously have this crazy amount of knowledge that requires a complex system to manage?

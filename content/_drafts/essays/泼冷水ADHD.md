@@ -5,7 +5,7 @@ tags:
 - 心理学
 - 内阻力
 date: 2025-02-23 09:44:59
-draft: false
+draft: true
 toc: true
 mentioned_books:
 - 一生之敌

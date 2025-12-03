@@ -10,7 +10,7 @@ tags:
 mentioned_books:
 - 如何从敌人身上获益
 date: 2025-10-29 21:13:00
-draft: false
+draft: true
 toc: true
 featured: true
 aliases:

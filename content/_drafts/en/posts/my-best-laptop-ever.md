@@ -1,7 +1,7 @@
 ---
 title: My Best Laptop Ever
 date: 2025-01-25 12:57:00
-draft: false
+draft: true
 toc: true
 ---
 

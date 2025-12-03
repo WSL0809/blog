@@ -6,7 +6,7 @@ tags:
 - 效率
 - 软件
 date: 2025-05-24 01:30:00
-draft: false
+draft: true
 toc: true
 aliases:
 - /posts/用apple快捷指令让手机干好正事/

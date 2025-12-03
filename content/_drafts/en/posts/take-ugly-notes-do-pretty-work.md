@@ -1,7 +1,7 @@
 ---
 title: Take Ugly Notes and Do Pretty Work
 date: 2025-05-09T16:59:00
-draft: false
+draft: true
 toc: true
 ---
 

@@ -5,7 +5,7 @@ tags:
   - 计算机
   - 设计
 date: 2025-11-25 23:49:00
-draft: false
+draft: true
 toc: true
 aliases:
   - /posts/go-philosophy

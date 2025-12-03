@@ -5,7 +5,7 @@ tags:
 - 神秘学
 - 认知
 date: 2025-08-09 21:27:00
-draft: false
+draft: true
 toc: true
 mentioned_books:
 - 黑暗的左手
