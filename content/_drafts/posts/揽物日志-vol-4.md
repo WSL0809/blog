@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 揽物日志 Vol.4
 subtitle: 如何在宿舍冲一杯咖啡
 date: 2025-01-11 23:56:00
@@ -6,7 +7,6 @@ categories: 揽物日志
 tags:
 - 咖啡
 - 生活
-draft: true
 toc: true
 aliases:
 - /posts/揽物日志-vol-4

@@ -1,11 +1,11 @@
 ---
+draft: true
 title: 揽物日志 Vol.6
 subtitle: 是什么让二十岁男大成为家庭主妇？
 categories: 揽物日志
 date: 2025-07-31 16:40:00
 tags:
 - 生活
-draft: true
 toc: true
 aliases:
 - /posts/揽物日志-vol-6

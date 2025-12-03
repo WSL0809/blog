@@ -1,9 +1,9 @@
 ---
+draft: true
 title: 人类一思考，AI 也不发笑
 tags:
 - AI
 date: 2025-04-12 22:50:00
-draft: true
 aliases:
 - /posts/人类一思考-ai也不会发笑
 ---

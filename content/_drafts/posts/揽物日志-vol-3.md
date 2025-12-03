@@ -1,9 +1,9 @@
 ---
+draft: true
 title: 揽物日志 Vol.3
 subtitle: 苹果产品和猫 🍎🐱
 categories: 揽物日志
 date: 2024-12-01 21:48:00
-draft: true
 tags:
 - Apple
 - 生活

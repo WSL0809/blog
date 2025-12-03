@@ -1,8 +1,8 @@
 ---
+draft: true
 title: 漂流
 date: 2024-09-06
 description: 男人在岸边发现了一具尸体。
-draft: true
 ---
 
 男人在岸边发现了一具尸体。

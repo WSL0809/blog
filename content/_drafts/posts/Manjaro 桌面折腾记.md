@@ -1,6 +1,6 @@
 ---
-date: 2024-02-14
 draft: true
+date: 2024-02-14
 title: Manjaro 桌面折腾记
 tags:
 - Geek

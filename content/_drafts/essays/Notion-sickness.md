@@ -1,8 +1,8 @@
 ---
+draft: true
 title: Notion-Sickness
 subtitle: 从「宇宙第一生产力」逃离
 description: 在几个月的拉扯之后，我终于抛弃了 Notion，这个完全能用「狂妄自大」来形容的笔记软件，似乎一切都要更简单明了了。
-draft: true
 date: 2024-12-11 22:50:00
 categories: 生产力报告
 tags:

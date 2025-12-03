@@ -1,10 +1,10 @@
 ---
+draft: true
 title: nihil sub sole novum
 tags:
   - 语言
   - 哲学
 date: 2025-03-25 23:55:01
-draft: true
 ---
 
 拉丁谚语「nihil sub sole novum」的意思是「日光之下，并无新事」。这句话出自通俗拉丁语版本的《圣经》，传道书 1:9，这一节的标题叫做「凡事都是虚空」。

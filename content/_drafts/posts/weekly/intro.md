@@ -1,8 +1,8 @@
 ---
+draft: true
 categories: 稻草人周刊
 date: 2024-11-01
 description: null
-draft: true
 featuredImage: https://image.guhub.cn/picgo/scarecrow-weekly-initial.jpg
 title: 稻草人周刊：发刊词
 toc: true

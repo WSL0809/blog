@@ -1,7 +1,7 @@
 ---
+draft: true
 title: Let's Make Friday Cry-Day
 date: 2025-10-31 23:16:00
-draft: true
 toc: false
 tags:
 - M

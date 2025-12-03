@@ -1,4 +1,5 @@
 ---
+draft: true
 title: AI 正在让人变得前所未有地自以为是
 tags:
 - AI
@@ -6,7 +7,6 @@ tags:
 - 编程
 - 工程
 date: 2025-04-02 13:33:10
-draft: true
 toc: true
 featured: true
 aliases:

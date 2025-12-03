@@ -1,9 +1,9 @@
 ---
+draft: true
 title: How to Deal With Idiots
 rating: 3
 cover: https://image.guhub.cn/uPic/2024/12/image-20241212221336611.png
 date: 2024-10-15T00:00:00
-draft: true
 tags:
   - 人际交往
 ---

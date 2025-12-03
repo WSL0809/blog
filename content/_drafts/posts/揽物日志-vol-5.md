@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 揽物日志 Vol.5
 subtitle: Aeropress 使用体验报告
 description: 上个月购入了早有耳闻的咖啡器具「爱乐压」，这个名字取得让人觉得有些讨厌，但原名我很喜欢，叫做 Aeropress。在《世界咖啡地图》里，James
@@ -9,7 +10,6 @@ tags:
 - 写作快闪ß
 categories: 揽物日志
 date: 2025-02-15 10:37:54
-draft: true
 toc: true
 aliases:
 - /posts/揽物日志-vol-5

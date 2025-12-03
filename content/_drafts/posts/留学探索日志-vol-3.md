@@ -1,11 +1,11 @@
 ---
+draft: true
 title: 溺于互联网之北冰洋
 tags:
 - 教育
 - 留学
 subtitle: 留学探索日志 Vol.3
 date: 2025-01-26 17:58:00
-draft: true
 mentioned_books:
 - 一生之敌
 aliases:

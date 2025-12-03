@@ -1,7 +1,7 @@
 ---
+draft: true
 title: How I Simplify My Reading Workflow
 date: 2025-01-30 23:31:00
-draft: true
 toc: false
 ---
 

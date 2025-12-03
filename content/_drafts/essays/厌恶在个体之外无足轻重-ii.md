@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 厌恶在个体之外无足轻重 II
 subtitle: 有关在什么场合说什么话的哲学
 tags:
@@ -10,7 +11,6 @@ tags:
 mentioned_books:
 - 如何从敌人身上获益
 date: 2025-10-29 21:13:00
-draft: true
 toc: true
 featured: true
 aliases:

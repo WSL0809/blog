@@ -1,4 +1,5 @@
 ---
+draft: true
 title: 用 Apple 快捷指令让手机干好正事
 tags:
 - Apple
@@ -6,7 +7,6 @@ tags:
 - 效率
 - 软件
 date: 2025-05-24 01:30:00
-draft: true
 toc: true
 aliases:
 - /posts/用apple快捷指令让手机干好正事/

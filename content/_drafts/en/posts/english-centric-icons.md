@@ -1,7 +1,7 @@
 ---
+draft: true
 title: English-Centric Icons
 date: 2025-09-18T22:52:00
-draft: true
 toc: true
 ---
 

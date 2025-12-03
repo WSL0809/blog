@@ -1,7 +1,7 @@
 ---
+draft: true
 title: Java Development with True IDEA
 date: 2025-10-20T16:16:00
-draft: true
 toc: true
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Blood-sweetened Cruelty
 draft: true
+title: Blood-sweetened Cruelty
 date: 2024-12-26 17:20:00
 categories: 乱章
 tags:

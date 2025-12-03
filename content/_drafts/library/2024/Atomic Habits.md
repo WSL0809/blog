@@ -1,9 +1,9 @@
 ---
+draft: true
 title: Atomic Habits
 rating: 3
 cover: https://image.guhub.cn/uPic/2024/12/image-20241212221725746.png
 date: 2024-11-11T00:00:00
-draft: true
 tags:
   - 习惯
   - 效率

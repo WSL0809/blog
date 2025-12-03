@@ -1,7 +1,7 @@
 ---
+draft: true
 date: 2024-08-25
 description: 不需要优先级，也不需要四象限，更不需要进度追踪……
-draft: true
 title: 更适合 P 人的效率方法论
 toc: true
 categories: 生产力报告

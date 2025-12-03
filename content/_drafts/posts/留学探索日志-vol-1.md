@@ -1,10 +1,10 @@
 ---
+draft: true
 title: 向往一场距离足够遥远的逃亡
 subtitle: 留学探索日志 Vol.1
 tags:
 - 留学
 date: 2024-12-09 10:05:00
-draft: true
 toc: true
 aliases:
 - /posts/留学探索日志-vol-1

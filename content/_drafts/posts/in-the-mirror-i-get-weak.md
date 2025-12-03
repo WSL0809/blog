@@ -1,11 +1,11 @@
 ---
+draft: true
 title: In the Mirror I Get Weak
 categories: 乱章
 tags:
 - R
 - 爱
 date: 2025-03-22 01:12:15
-draft: true
 toc: true
 aliases:
 - /posts/in-the-mirror-i-get-weak

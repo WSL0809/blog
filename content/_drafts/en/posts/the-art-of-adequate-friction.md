@@ -1,7 +1,7 @@
 ---
+draft: true
 title: The Art of Adequate Friction
 date: 2025-03-29 11:54:02
-draft: true
 toc: true
 ---
 

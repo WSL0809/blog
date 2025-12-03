@@ -1,7 +1,7 @@
 ---
+draft: true
 date: 2024-09-19
 description: 每日写作计划结语
-draft: true
 featuredImage: https://image.guhub.cn/blog/2024/writathon-a.jpg
 title: 'Writathon Review: α'
 toc: false

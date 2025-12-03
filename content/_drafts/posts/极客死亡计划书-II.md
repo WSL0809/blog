@@ -1,11 +1,11 @@
 ---
+draft: true
 title: 极客死亡计划书 II
 subtitle: 个人博客的新格局
 tags:
 - 写作
 categories: 极客死亡计划书
 date: 2025-03-27 23:48:20
-draft: true
 toc: true
 aliases:
 - /posts/极客死亡计划书-ii

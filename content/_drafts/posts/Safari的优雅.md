@@ -1,11 +1,11 @@
 ---
+draft: true
 title: Safari 的优雅
 subtitle: Chrome vs. Safari
 date: 2025-01-18 22:57:00
 tags:
 - Apple
 - Geek
-draft: true
 toc: true
 aliases:
 - /posts/safari的优雅

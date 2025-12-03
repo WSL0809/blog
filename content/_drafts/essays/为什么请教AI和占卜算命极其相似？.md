@@ -1,11 +1,11 @@
 ---
+draft: true
 title: 为什么请教 AI 和占卜算命极其相似？
 tags:
 - AI
 - 神秘学
 - 认知
 date: 2025-08-09 21:27:00
-draft: true
 toc: true
 mentioned_books:
 - 黑暗的左手
